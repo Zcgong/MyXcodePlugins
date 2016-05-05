@@ -1,3 +1,5 @@
+![AMMethod2Implement Banner](https://raw.github.com/MellongLau/AMMethod2Implement/master/Screenshots/banner.png)
+
 AMMethod2Implement
 ==================
 
@@ -36,16 +38,10 @@ Use key `Ctrl+A` or go to menu `Edit` > `AMMethod2Implement` > `Implement Method
 1. Multiline method and const string implement.
 ![usageScreenshot.gif](https://raw.github.com/MellongLau/AMMethod2Implement/master/Screenshots/usageScreenshot.gif)
 
-2. Implement method.
-![implement_method.gif](https://raw.github.com/MellongLau/AMMethod2Implement/master/Screenshots/implement_method.gif)
-
-3. Implement const string.
-![implement_const_string.gif](https://raw.github.com/MellongLau/AMMethod2Implement/master/Screenshots/implement_const_string.gif)
-
-4. Declare method.
+2. Declare method.
 ![declare_method.gif](https://raw.github.com/MellongLau/AMMethod2Implement/master/Screenshots/declare_method.gif)
 
-5. Implement selector.
+3. Implement selector.
 ![implement_selector.gif](https://raw.github.com/MellongLau/AMMethod2Implement/master/Screenshots/implement_selector.gif)
 
 ## Install
@@ -74,20 +70,13 @@ In any case, relaunch Xcode to load it.
 
 Developed and tested against Xcode 6+.
 
-For Xcode7.1, you may need to run shell script:
-```shell
-find ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins -name Info.plist -maxdepth 3 | xargs -I{} defaults write {} DVTPlugInCompatibilityUUIDs -array-add defaults read /Applications/Xcode.app/Contents/Info DVTPlugInCompatibilityUUID
+After upgrade your Xcode, you may need to run below shell script to add your current Xcode DVTPlugInCompatibilityUUID to all the Xcode plugins:
 
-sudo xcode-select --reset
+> curl https://raw.githubusercontent.com/cielpy/RPAXU/master/refreshPluginsAfterXcodeUpgrading.sh | sh
 
-defaults delete com.apple.dt.Xcode DVTPlugInManagerNonApplePlugIns-Xcode-7.1
-
-```
-
-Or download and execute this [script](https://github.com/cielpy/RPAXU) to add your current Xcode DVTPlugInCompatibilityUUID to all the Xcode plugins.  
 
 ## Thanks
-- @HelloZJW [Added get method for property if get method not exist]
+- (@HelloZJW)[https://github.com/HelloZJW] [Added get method for property if get method not exist]
 
 ## Todo
 
